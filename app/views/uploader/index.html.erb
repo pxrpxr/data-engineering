@@ -1,0 +1,22 @@
+<div class='containter'>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h1>Uploader</h1>
+      <hr>
+      <%= form_tag('/upload', multipart: true, role:'form') do %>
+        <div class="form-group">
+          <label for="tabfile">File input</label>
+          <%= file_field_tag 'tabfile', id:'tabfile' %>
+          <p class="help-block">
+            Select file to upload.<br>
+            This will be parsed and inserted into the databases. <br>
+            Afterwards, a gross revenue calculation result will be displayed. <br>
+          </p>
+        </div>
+        <%= submit_tag("upload", class:'btn btn-default') %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
